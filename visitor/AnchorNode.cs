@@ -2,8 +2,8 @@
 namespace visitor_design_pattern.visitor;
 public class AnchorNode : IHtmlNode
 {
-    public void Highlight()
+    public void Execute(IOperation operation)
     {
-        Console.WriteLine("Highlight-Anchor");
+        operation.Apply(this);
     }
 }
